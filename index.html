@@ -29,7 +29,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             z-index: 2000;
         }
-        /* 圖例說明面板 */
         #legend-panel {
             position: absolute;
             top: 10px;
@@ -55,7 +54,6 @@
             border: 1px solid #fff;
             box-shadow: 0 0 3px rgba(0,0,0,0.4);
         }
-        /* 自訂圓點樣式 */
         .water-marker {
             border-radius: 50%;
             border: 2px solid #ffffff;
@@ -78,9 +76,8 @@
 </head>
 <body>
 
-    <div id="loading">🔄 正在獲取市政署與環保局飲水設施數據...</div>
+    <div id="loading">🔄 正在透過 APIGateway 安全獲取飲水設施數據...</div>
     
-    <!-- 右上角圖例 -->
     <div id="legend-panel">
         <strong style="display:block; margin-bottom: 5px;">💧 飲水設施分類</strong>
         <div class="legend-item">
@@ -96,7 +93,6 @@
     <div id="map"></div>
 
     <script>
-        // 1. 設定地圖邊界限制（防止迷失）
         const macauBounds = L.latLngBounds(
             L.latLng(22.0800, 113.4800),
             L.latLng(22.2500, 113.6200)
@@ -117,13 +113,13 @@
 
         let userLocationMarker = null;
 
-        // 2. 開放平台數據集 API 網址 (根據你提供的 Data.gov.mo 資源轉換)
-        // 注意：在實際開發生產環境中，若平台有提供 APPCODE 驗證，需加入 headers；此處預設使用平台公開下載節點
+        // 【修正】填入你提供的主流 API 網關網址
         const iamUrl = "https://iam.apigateway.data.gov.mo/facility_drink"; 
         const dspaUrl = "https://dspa.apigateway.data.gov.mo/T_Bas_POI_Basic/drinkingFountain";
+        
+        // 【修正】加入你的專屬 APPCODE 認證標頭，解決 403 / 401 拒絕連線問題
         const headers = { "Authorization": "APPCODE 09d43a591fba407fb862412970667de4" };
 
-        // 自訂部門顏色 Icon
         function createWaterIcon(color) {
             return L.divIcon({
                 className: 'water-marker',
@@ -133,76 +129,122 @@
             });
         }
 
-        // 3. 核心功能：並行抓取並解析兩局處的數據
+        // 解析政府 API 返回的 XML 字符串（如果 API 返回的是 XML）
+        function parseXml(xmlString) {
+            const parser = new DOMParser();
+            return parser.parseFromString(xmlString, "text/xml");
+        }
+
         async function fetchWaterData() {
             try {
-                // 同時請求兩個部門的數據
+                // 帶上驗證頭部請求數據
                 const [iamRes, dspaRes] = await Promise.all([
-                    fetch(iamUrl).then(res => res.json()),
-                    fetch(dspaUrl).then(res => res.json())
+                    fetch(iamUrl, { headers }),
+                    fetch(dspaUrl, { headers })
                 ]);
 
-                // 隱藏加載提示
+                const iamText = await iamRes.text();
+                const dspaText = await dspaRes.text();
+
                 document.getElementById('loading').style.display = 'none';
 
-                // --- 解析 A：市政署 (IAM) 數據 ---
-                // 根據開放平台標準 JSON 格式，數據通常存放在 response 或原生地標數組中
-                // 這裡根據你提到的：「location 字段含經緯度 (格式通常為 "緯度,經度" 或 JSON 對象)」進行動態拆分
-                if (iamRes && iamRes.data) {
-                    iamRes.data.forEach(item => {
-                        let lat, lng;
-                        
-                        // 處理 location 欄位字串（例如 "22.1984,113.5431"）
-                        if (item.location && typeof item.location === 'string') {
-                            const coords = item.location.split(',');
-                            lat = parseFloat(coords[0]);
-                            lng = parseFloat(coords[1]);
+                // --- 1. 解析市政署 (IAM) 資料 ---
+                try {
+                    // 自動判斷 API 給的是 JSON 還是 XML
+                    if (iamText.trim().startsWith('{')) {
+                        const iamJson = JSON.parse(iamText);
+                        const items = iamJson.data || iamJson.Data || iamJson;
+                        if (Array.isArray(items)) {
+                            items.forEach(item => renderIamMarker(item));
                         }
-
-                        if (!isNaN(lat) && !isNaN(lng)) {
-                            const popupHtml = `
-                                <div style="font-family: Arial, sans-serif; width: 220px; line-height: 1.4;">
-                                    <h4 style="margin: 0 0 5px 0; color: #2980b9; font-size: 14px;">藍色加水點 (市政署)</h4>
-                                    <p style="margin: 4px 0; font-size: 12px;">📍 <b>位置：</b>${item.cn_name || item.location_desc || '市政署指定飲水機'}</p>
-                                    <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>管理部門：</b>市政署 (IAM)</p>
-                                </div>
-                            `;
-                            L.marker([lat, lng], { icon: createWaterIcon('#2980b9') })
-                             .addTo(map)
-                             .bindPopup(popupHtml);
+                    } else {
+                        const xmlDoc = parseXml(iamText);
+                        const items = xmlDoc.getElementsByTagName("facility") || xmlDoc.getElementsByTagName("info") || xmlDoc.querySelectorAll("location");
+                        // 如果是標準 XML 節點遍歷
+                        for (let item of xmlDoc.querySelectorAll('*')) {
+                            if (item.getAttribute('location') || item.getElementsByTagName('location').length > 0) {
+                                // 嘗試兼容節點屬性讀取
+                                renderIamMarker({
+                                    location: item.getAttribute('location') || item.textContent,
+                                    cn_name: item.getAttribute('cn_name') || item.getAttribute('name') || '市政署飲水機'
+                                });
+                            }
                         }
-                    });
-                }
+                    }
+                } catch (e) { console.error("解析市政署數據時出錯", e); }
 
-                // --- 解析 B：環境保護局 (DSPA) 數據 ---
-                // 根據你提到的：「latitude 及 longitude 欄位分別含緯度及經度」
-                if (dspaRes && dspaRes.data) {
-                    dspaRes.data.forEach(item => {
-                        const lat = parseFloat(item.latitude);
-                        const lng = parseFloat(item.longitude);
-
-                        if (!isNaN(lat) && !isNaN(lng)) {
-                            const popupHtml = `
-                                <div style="font-family: Arial, sans-serif; width: 220px; line-height: 1.4;">
-                                    <h4 style="margin: 0 0 5px 0; color: #27ae60; font-size: 14px;">綠色加水點 (環境保護局)</h4>
-                                    <p style="margin: 4px 0; font-size: 12px;">📍 <b>位置：</b>${item.place_nc || item.address || '環保局飲水設施'}</p>
-                                    <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>管理部門：</b>環境保護局 (DSPA)</p>
-                                </div>
-                            `;
-                            L.marker([lat, lng], { icon: createWaterIcon('#27ae60') })
-                             .addTo(map)
-                             .bindPopup(popupHtml);
+                // --- 2. 解析環境保護局 (DSPA) 資料 ---
+                try {
+                    if (dspaText.trim().startsWith('{')) {
+                        const dspaJson = JSON.parse(dspaText);
+                        const items = dspaJson.data || dspaJson.Data || dspaJson;
+                        if (Array.isArray(items)) {
+                            items.forEach(item => renderDspaMarker(item));
                         }
-                    });
-                }
+                    } else {
+                        const xmlDoc = parseXml(dspaText);
+                        // 尋找包含經緯度的標籤
+                        const records = xmlDoc.getElementsByTagName("record") || xmlDoc.getElementsByTagName("info") || xmlDoc.querySelectorAll("*");
+                        for (let item of records) {
+                            const latAttr = item.getAttribute('latitude') || (item.getElementsByTagName('latitude')[0] ? item.getElementsByTagName('latitude')[0].textContent : null);
+                            const lngAttr = item.getAttribute('longitude') || (item.getElementsByTagName('longitude')[0] ? item.getElementsByTagName('longitude')[0].textContent : null);
+                            if (latAttr && lngAttr) {
+                                renderDspaMarker({
+                                    latitude: latAttr,
+                                    longitude: lngAttr,
+                                    place_nc: item.getAttribute('place_nc') || item.getAttribute('name') || '環保局飲水設施'
+                                });
+                            }
+                        }
+                    }
+                } catch (e) { console.error("解析環保局數據時出錯", e); }
 
             } catch (error) {
-                console.error("飲水機數據加載失敗：", error);
-                document.getElementById('loading').innerText = "❌ 獲取飲水設施數據失敗，請確認 Data.gov.mo 接口狀態。";
+                console.error("API 連線失敗：", error);
+                document.getElementById('loading').innerText = "❌ 認證或連線失敗，請檢查 APPCODE 是否過期。";
             }
         }
 
-        // 4. GPS 手機實時定位按鈕功能
+        // 市政署標記渲染輔助函式
+        function renderIamMarker(item) {
+            let locStr = item.location || item.Location || "";
+            if (!locStr) return;
+            const coords = locStr.split(',');
+            const lat = parseFloat(coords[0]);
+            const lng = parseFloat(coords[1]);
+
+            if (!isNaN(lat) && !isNaN(lng)) {
+                const name = item.cn_name || item.cn_location || item.name || "市政署飲水設施";
+                const popupHtml = `
+                    <div style="font-family: Arial, sans-serif; width: 220px; line-height: 1.4;">
+                        <h4 style="margin: 0 0 5px 0; color: #2980b9; font-size: 14px;">🔵 市政署飲水機</h4>
+                        <p style="margin: 4px 0; font-size: 12px;">📍 <b>位置：</b>${name}</p>
+                        <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>數據來源：</b>市政署 (IAM)</p>
+                    </div>
+                `;
+                L.marker([lat, lng], { icon: createWaterIcon('#2980b9') }).addTo(map).bindPopup(popupHtml);
+            }
+        }
+
+        // 環保局標記渲染輔助函式
+        function renderDspaMarker(item) {
+            const lat = parseFloat(item.latitude || item.Latitude);
+            const lng = parseFloat(item.longitude || item.Longitude);
+
+            if (!isNaN(lat) && !isNaN(lng)) {
+                const name = item.place_nc || item.address || item.name || "環保局加水點";
+                const popupHtml = `
+                    <div style="font-family: Arial, sans-serif; width: 220px; line-height: 1.4;">
+                        <h4 style="margin: 0 0 5px 0; color: #27ae60; font-size: 14px;">🟢 環保局飲水設施</h4>
+                        <p style="margin: 4px 0; font-size: 12px;">📍 <b>位置：</b>${name}</p>
+                        <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>數據來源：</b>環境保護局 (DSPA)</p>
+                    </div>
+                `;
+                L.marker([lat, lng], { icon: createWaterIcon('#27ae60') }).addTo(map).bindPopup(popupHtml);
+            }
+        }
+
+        // GPS 定位控制
         function setupLocationControl() {
             const LocateControl = L.Control.extend({
                 options: { position: 'topleft' },
@@ -210,21 +252,16 @@
                     const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
                     const button = L.DomUtil.create('button', 'locate-btn', container);
                     button.innerHTML = '📍';
-                    button.title = '定位我的位置';
-
+                    
                     button.onclick = function (e) {
                         e.stopPropagation();
-                        if (!navigator.geolocation) {
-                            alert("您的瀏覽器不支援 GPS 定位功能。");
-                            return;
-                        }
+                        if (!navigator.geolocation) return;
                         button.innerHTML = '🔄';
                         navigator.geolocation.getCurrentPosition(
                             function (position) {
                                 button.innerHTML = '📍';
                                 const lat = position.coords.latitude;
                                 const lng = position.coords.longitude;
-
                                 if (macauBounds.contains([lat, lng])) {
                                     map.setView([lat, lng], 16);
                                     if (userLocationMarker) {
@@ -238,14 +275,9 @@
                                             fillOpacity: 1
                                         }).addTo(map).bindPopup("<b>📍 您目前的位置</b>").openPopup();
                                     }
-                                } else {
-                                    alert(`定位成功，但您不在澳門地圖有效範圍內。`);
                                 }
                             },
-                            function (error) {
-                                button.innerHTML = '📍';
-                                alert("定位失敗，請確認已開啟手機位置權限。");
-                            },
+                            function () { button.innerHTML = '📍'; },
                             { enableHighAccuracy: true, timeout: 10000 }
                         );
                     };
@@ -255,7 +287,6 @@
             map.addControl(new LocateControl());
         }
 
-        // 啟動地圖數據流與定位
         fetchWaterData();
         setupLocationControl();
     </script>
