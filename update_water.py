@@ -27,7 +27,7 @@ def find_list_in_json(data):
                 return res
     return None
 
-# 1. 抓取市政署資料
+# 1. 抓取市政署資料 (GET)
 try:
     iam_res = requests.get(iam_url, headers=headers, timeout=15)
     iam_json = iam_res.json()
@@ -46,48 +46,42 @@ try:
                     "lat": float(lat),
                     "lng": float(lng)
                 })
-        print(f"✅ 成功解析市政署數據，目前累計: {len(combined_data)} 筆")
+        print(f"✅ 成功解析動態市政署數據，目前累計: {len(combined_data)} 筆")
 except Exception as e:
     print(f"❌ 市政署數據抓取失敗: {e}")
 
-# 2. 抓取環保局資料 (防禦升級版)
+# 2. 抓取環保局資料 (【修正】改為 POST 請求)
 try:
-    dspa_res = requests.get(dspa_url, headers=headers, timeout=15)
+    # 根據官方要求，改用 requests.post
+    dspa_res = requests.post(dspa_url, headers=headers, timeout=15)
     
     print(f"📡 環保局伺服器響應狀態碼: {dspa_res.status_code}")
     
-    # 檢查內容是否為空的
-    if not dspa_res.text.strip():
-        print("❌ 環保局伺服器回傳了【完全空白】的內容！可能是 APPCODE 有誤或 IP 被封鎖。")
-    else:
-        # 如果不是 JSON，先印出前 300 個字看是不是 HTML 錯誤網頁
-        if not dspa_res.text.strip().startswith(('{', '[')):
-            print(f"⚠️ 環保局回傳的【不是 JSON 格式】！真實回傳內容片段如下：\n{dspa_res.text[:300]}")
-        else:
-            dspa_json = dspa_res.json()
-            dspa_items = find_list_in_json(dspa_json)
+    dspa_json = dspa_res.json()
+    dspa_items = find_list_in_json(dspa_json)
 
-            if dspa_items:
-                dspa_count = 0
-                for item in dspa_items:
-                    if item.get('latitude') and item.get('longitude'):
-                        combined_data.append({
-                            "type": "dspa",
-                            "name": item.get('name_tc', '環保局飲水設施'),
-                            "address": item.get('address_tc', ''),
-                            "openHour": "",
-                            "lat": float(item['latitude']),
-                            "lng": float(item['longitude'])
-                        })
-                        dspa_count += 1
-                print(f"✅ 成功解析環境保護局數據，新增: {dspa_count} 筆")
-            else:
-                print("⚠️ 環境保護局未提取到有效的陣列清單資料！")
+    if dspa_items:
+        dspa_count = 0
+        for item in dspa_items:
+            if item.get('latitude') and item.get('longitude'):
+                combined_data.append({
+                    "type": "dspa",
+                    "name": item.get('name_tc', '環保局飲水設施'),
+                    "address": item.get('address_tc', ''),
+                    "openHour": "依場地開放時間為準",
+                    "lat": float(item['latitude']),
+                    "lng": float(item['longitude'])
+                })
+                dspa_count += 1
+        print(f"✅ 成功透過 POST 接口解析環境保護局最新數據，新增: {dspa_count} 筆")
+    else:
+        print("⚠️ 環境保護局未提取到有效的陣列清單資料！")
+
 except Exception as e:
-    print(f"❌ 環保局數據抓取或解析失敗: {e}")
+    print(f"❌ 環保局動態數據抓取或解析失敗: {e}")
 
 # 儲存為合法的 JSON 檔案
 with open("water_data.json", "w", encoding="utf-8") as f:
     json.dump(combined_data, f, ensure_ascii=False, indent=4)
 
-print(f"🎉 任務結束！共合併儲存 {len(combined_data)} 筆資料至 water_data.json")
+print(f"🎉 任務結束！最終成功合併儲存 {len(combined_data)} 筆實時資料至 water_data.json")
