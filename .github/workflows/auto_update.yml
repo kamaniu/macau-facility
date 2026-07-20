@@ -1,0 +1,34 @@
+name: 澳門飲水機數據定時更新
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 飲水機位置是固定的，設定每天凌晨自動更新一次即可，不用浪費伺服器資源
+  workflow_dispatch: # 允許手動點擊測試
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 1. 複製專案檔案
+      uses: actions/checkout@v4
+
+    - name: 2. 設定 Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: 3. 安裝必要套件
+      run: pip install requests
+
+    - name: 4. 執行 Python 抓取並生成 JSON
+      run: python update_water.py
+
+    - name: 5. 提交並同步資料檔案
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add water_data.json
+        git diff-index --quiet HEAD || (git commit -m "更新飲水機數據資料庫" && git push)
