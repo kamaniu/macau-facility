@@ -16,7 +16,6 @@
         .water-marker { border-radius: 50%; border: 2px solid #ffffff; box-shadow: 0 0 4px rgba(0,0,0,0.4); }
         .locate-btn { background: white; border: none; cursor: pointer; width: 34px; height: 34px; border-radius: 4px; box-shadow: 0 1px 5px rgba(0,0,0,0.65); display: flex; align-items: center; justify-content: center; font-size: 18px; }
         
-        /* 【新增】優化彈出視窗內的圖片樣式 */
         .popup-photo {
             width: 100%;
             max-height: 140px;
@@ -57,7 +56,7 @@
                     const title = item.type === 'iam' ? '🔵 市政署飲水機' : '🟢 環保局飲水設施';
                     const openHourHtml = item.openHour ? `<p style="margin: 4px 0; font-size: 12px;">⏰ <b>開放時間：</b>${item.openHour}</p>` : "";
                     
-                    # 【新增】動態判斷是否有照片，有的話才生成 <img> 標籤
+                    // 【修正】已更改為正確的 JavaScript 雙斜線註解
                     let photoHtml = "";
                     if (item.photo && item.photo.trim() !== "") {
                         photoHtml = `<img src="${item.photo}" class="popup-photo" alt="${item.name}" onerror="this.style.display='none';">`;
@@ -79,7 +78,6 @@
             }
         }
 
-        // 定位按鈕邏輯
         function setupLocationControl() {
             const LocateControl = L.Control.extend({
                 options: { position: 'topleft' },
