@@ -4,6 +4,7 @@
         "name": "九澳高頂燒烤公園",
         "address": "九澳高頂馬路末段",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1054_62f4608b2e5c5f1e05da05583a80f460.jpg",
         "lat": 22.129085681259575,
         "lng": 113.57563923562115
     },
@@ -12,6 +13,7 @@
         "name": "二龍喉公園",
         "address": "澳門士多鳥拜斯大馬路",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/508_c73065b3623d78f1f909804bdc069ff6.jpg",
         "lat": 22.19942,
         "lng": 113.550822
     },
@@ -20,6 +22,7 @@
         "name": "三盞燈活動中心(地下)",
         "address": "澳門嘉路米耶圓形地5及7號三盞燈綜合大樓地下",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/563_c36690c327dfbe5a7a0f6a4476652dc9.jpg",
         "lat": 22.202738,
         "lng": 113.545935
     },
@@ -28,6 +31,7 @@
         "name": "三盞燈活動中心一樓(三溫機)",
         "address": "澳門嘉路米耶圓形地5及7號三盞燈綜合大樓一樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1055_ea3fea8adc7a99a78ec5117b088df54a.jpg",
         "lat": 22.202738,
         "lng": 113.545935
     },
@@ -36,6 +40,7 @@
         "name": "下環活動中心(三溫機) ",
         "address": "澳門李加祿街下環街市市政綜合大樓四樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/668_61e5e1b108c09d9f204dfe7d2c8584a5.jpg",
         "lat": 22.191004,
         "lng": 113.534641
     },
@@ -44,6 +49,7 @@
         "name": "下環活動中心(天台) ",
         "address": "澳門李加祿街下環街市市政綜合大樓天台",
         "openHour": "每日上午七時半至晚上六時半 (週末及公眾假期照常開放，農曆新年假期除外。)\n\n",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/764_e67046a10a8490801d4d99d17bba86cc.jpg",
         "lat": 22.19094059383622,
         "lng": 113.53477022964398
     },
@@ -52,6 +58,7 @@
         "name": "大潭山郊野公園",
         "address": "氹仔天文台斜路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/887_5c59e673d1fd15cdb9954e06d9e13003.jpg",
         "lat": 22.1583407,
         "lng": 113.5723572
     },
@@ -60,6 +67,7 @@
         "name": "大潭山郊野公園",
         "address": "氹仔天文台斜路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/663_41f22a6ae20ea2c2c715015db505ec31.jpg",
         "lat": 22.1548527,
         "lng": 113.561562
     },
@@ -68,6 +76,7 @@
         "name": "中區市民服務中心 ",
         "address": "澳門三盞燈5及7號三盞燈綜合大樓3樓",
         "openHour": "週一至週五，上午9時至下午6時 (中午照常辦公，週六、日及公眾假期休息)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/794_b1c7bc18f93fab0a1fa7dd65486c740e.jpg",
         "lat": 22.202562,
         "lng": 113.545968
     },
@@ -76,6 +85,7 @@
         "name": "水塘公園",
         "address": "水塘周邊",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/947_ce904517d510ab9db33c0635a3fb076a.jpg",
         "lat": 22.198405,
         "lng": 113.554997
     },
@@ -84,6 +94,7 @@
         "name": "水塘公園 ",
         "address": "水塘周邊",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/942_c4ca4238a0b923820dcc509a6f75849b.jpg",
         "lat": 22.199203,
         "lng": 113.555036
     },
@@ -92,6 +103,7 @@
         "name": "水塘公園(三溫機)",
         "address": "澳門水塘周邊",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/983_c4ca4238a0b923820dcc509a6f75849b.jpg",
         "lat": 22.204543,
         "lng": 113.560271
     },
@@ -100,6 +112,7 @@
         "name": "市政臨時休憩區（林茂塘）",
         "address": "澳門林茂海邊大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/542_8899c1692e4081ee3f5e9d189fd33fbd.jpg",
         "lat": 22.20413353245026,
         "lng": 113.53891879320146
     },
@@ -108,6 +121,7 @@
         "name": "氹仔中央公園",
         "address": "成都街, 7號",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/565_dc37ec550d44cb69d2521b30b78b2e41.jpg",
         "lat": 22.159675707503062,
         "lng": 113.55417640775396
     },
@@ -116,6 +130,7 @@
         "name": "氹仔中央公園",
         "address": "成都街, 7號",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/648_eed4c84d5c9f8b0abed39c83eb11a164.jpg",
         "lat": 22.158403862706503,
         "lng": 113.55509811765803
     },
@@ -124,6 +139,7 @@
         "name": "氹仔海濱休憩區",
         "address": "氹仔東亞運大馬路、東亞運圓形地及海洋大馬路的沿海位置",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/754_199c732119a9fc5faa2f8cdb996e11b2.jpg",
         "lat": 22.162572,
         "lng": 113.541126
     },
@@ -132,6 +148,7 @@
         "name": "氹仔海濱休憩區",
         "address": "氹仔東亞運大馬路、東亞運圓形地及海洋大馬路的沿海位置",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/554_511b896838519045dcdf1eb782eaaf65.jpg",
         "lat": 22.16281767305374,
         "lng": 113.54107528924945
     },
@@ -140,6 +157,7 @@
         "name": "氹仔海濱休憩區",
         "address": "氹仔東亞運大馬路、東亞運圓形地及海洋大馬路的沿海位置",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/906_c078f156bab97c545f11e201ec59501b.jpg",
         "lat": 22.16420788171024,
         "lng": 113.53966273065454
     },
@@ -148,6 +166,7 @@
         "name": "氹仔黑橋活動中心(三溫機)",
         "address": "氹仔黑橋街平民新村第11座115N地下",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "",
         "lat": 22.155014,
         "lng": 113.555605
     },
@@ -156,6 +175,7 @@
         "name": "白鴿巢公園",
         "address": "澳門白鴿巢前地, 白鴿巢公園",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/712_ae1ae1fed2a29b7da19478124569e4b5.jpg",
         "lat": 22.201367,
         "lng": 113.539288
     },
@@ -164,6 +184,7 @@
         "name": "白鴿巢公園(三溫機)",
         "address": "澳門白鴿巢前地, 白鴿巢公園",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/602_cecedb9033db967e330bc97e5d6eaea2.jpg",
         "lat": 22.201367,
         "lng": 113.539288
     },
@@ -172,6 +193,7 @@
         "name": "石排灣市區公園",
         "address": "石排灣水庫周邊",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/595_3b151af43cf45d2ff9cd8816cd7b1ca6.jpg",
         "lat": 22.132185855370473,
         "lng": 113.56571016967686
     },
@@ -180,6 +202,7 @@
         "name": "石排灣市區公園",
         "address": "石排灣水庫周邊",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/536_1737c38f562a34d7c03b8d2981bcade2.jpg",
         "lat": 22.135101173555878,
         "lng": 113.5670775801085
     },
@@ -188,6 +211,7 @@
         "name": "石排灣社區綜合大樓 ",
         "address": "路環蝴蝶谷大馬路石排灣社區綜合大樓6樓 ",
         "openHour": null,
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/834_4fa5ea51ce717a9945d160a1c9078a71.jpg",
         "lat": 22.1284934,
         "lng": 113.5617591
     },
@@ -196,6 +220,7 @@
         "name": "石排灣社區綜合大樓天台花園",
         "address": "路環蝴蝶谷大馬路",
         "openHour": "06:00-22:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/769_588db5732ce612bea3fa6a812215393d.jpg",
         "lat": 22.128717253771047,
         "lng": 113.56164654943015
     },
@@ -204,6 +229,7 @@
         "name": "石排灣活動中心 (三溫機)",
         "address": "路環蝴蝶谷大馬路石排灣社區綜合大樓6樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/851_a547c8d0b74d4f754def71631c41fbe7.jpg",
         "lat": 22.1284934,
         "lng": 113.5617591
     },
@@ -212,6 +238,7 @@
         "name": "石排灣郊野公園",
         "address": "路環石排灣馬路",
         "openHour": "06:00-22:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/750_55ca3e56289f8b907fd278b18364b00c.jpg",
         "lat": 22.12677900997999,
         "lng": 113.55826788299457
     },
@@ -220,6 +247,7 @@
         "name": "石排灣郊野公園",
         "address": "路環石排灣馬路",
         "openHour": "06:00-22:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/608_1e3d969aec8dcb7a75483f8ffa22441e.jpg",
         "lat": 22.12565148286854,
         "lng": 113.55683408014289
     },
@@ -228,6 +256,7 @@
         "name": "竹室正街休憩區",
         "address": "澳門竹室正街/西望洋斜巷",
         "openHour": "07:00-22:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/865_80c9a46e39bd8980ae1e4e61018c4545.jpg",
         "lat": 22.187309488014712,
         "lng": 113.53591801998014
     },
@@ -236,6 +265,7 @@
         "name": "竹灣燒烤公園",
         "address": "路環竹灣馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/537_c4b57c41d4c84fc34ffe9411a388d12a.jpg",
         "lat": 22.1142293,
         "lng": 113.5628666
     },
@@ -244,6 +274,7 @@
         "name": "西望洋花園",
         "address": "澳門西望洋馬路,西望洋花園",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/936_dd137b43f0a85ebdb1dd5385abd18261.jpg",
         "lat": 22.18491870646546,
         "lng": 113.53306524406403
     },
@@ -252,6 +283,7 @@
         "name": "西灣湖下層廣場",
         "address": "西灣湖下層廣場",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/651_dec3da19c41f76d733f02f24ea0027cd.jpg",
         "lat": 22.181014,
         "lng": 113.536571
     },
@@ -260,6 +292,7 @@
         "name": "西灣湖休憩區",
         "address": "澳門西灣湖景大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/854_bfc9dbaa25eb1b32c122830c84df8922.jpg",
         "lat": 22.179716,
         "lng": 113.532081
     },
@@ -268,6 +301,7 @@
         "name": "宋玉生公園",
         "address": "澳門宋玉生廣場",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/950_7193aa89a38f12b5cbcbd75af7c42fe0.jpg",
         "lat": 22.18827115688355,
         "lng": 113.55095232302588
     },
@@ -276,6 +310,7 @@
         "name": "沙梨頭活動中心",
         "address": "澳門爹美刁施拿地大馬路230號沙梨頭街市市政綜合大樓九樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/748_4bccb8adcfe9bdffa533e3eb192f52b7.jpg",
         "lat": 22.2025,
         "lng": 113.5372
     },
@@ -284,6 +319,7 @@
         "name": "和諧廣場休憩區",
         "address": "路環和諧廣場(樂群樓側)",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1061_e572e0259283677da0c24423365e30d8.jpg",
         "lat": 22.129465635629987,
         "lng": 113.56278817802911
     },
@@ -292,6 +328,7 @@
         "name": "和諧廣場休憩區",
         "address": "路環和諧廣場(樂群樓側)",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1060_3840a8f06ef3e16b46a3bccdd6711f00.jpg",
         "lat": 22.129964555594505,
         "lng": 113.56277311558661
     },
@@ -300,6 +337,7 @@
         "name": "和諧廣場休憩區",
         "address": "路環和諧廣場(業興大廈側)",
         "openHour": "07:00-22:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1059_18432f756705e735f8f8f7199db55144.jpg",
         "lat": 22.12950843932208,
         "lng": 113.56315135416133
     },
@@ -308,6 +346,7 @@
         "name": "和諧廣場休憩區",
         "address": "路環和諧廣場(業興大廈側)",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1058_49a1f307c8f137a885b00c8835160cb2.jpg",
         "lat": 22.129967220528627,
         "lng": 113.56313011165349
     },
@@ -316,6 +355,7 @@
         "name": "松山市政公園",
         "address": "東望洋山",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/810_a15242a53bbcc23da578ce7c4e4605f5.jpg",
         "lat": 22.196952,
         "lng": 113.548842
     },
@@ -324,6 +364,7 @@
         "name": "松山市政公園",
         "address": "東望洋山",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/569_08e7df8dd60f904276a7984b635661b1.jpg",
         "lat": 22.199478,
         "lng": 113.552509
     },
@@ -332,6 +373,7 @@
         "name": "松山市政公園",
         "address": "東望洋山",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/804_a488f426201cb0af8265a10b2071475a.jpg",
         "lat": 22.198757,
         "lng": 113.552001
     },
@@ -340,6 +382,7 @@
         "name": "松山市政公園(三溫機)",
         "address": "澳門東望洋山",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/603_c4ca4238a0b923820dcc509a6f75849b.jpg",
         "lat": 22.199313,
         "lng": 113.552243
     },
@@ -348,6 +391,7 @@
         "name": "松山行人隧道",
         "address": "東望洋山",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/729_b93bd5aafa5a25ebebdba1a673bc7147.jpg",
         "lat": 22.19709566879678,
         "lng": 113.55275094509126
     },
@@ -356,6 +400,7 @@
         "name": "林茂塘自由波地",
         "address": "澳門林茂海邊大馬路",
         "openHour": "星期一至星期日上午7時至晚上11時",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/761_1d5681f7ee2a1b6ececaec3e55631b79.jpg",
         "lat": 22.20413353245026,
         "lng": 113.53891879320146
     },
@@ -364,6 +409,7 @@
         "name": "林茂塘臨時休憩區",
         "address": "澳門林茂海邊大馬路",
         "openHour": "星期一至星期日上午7時至晚上10時",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/606_f1face91816fd5dddd7d71bd8526592a.jpg",
         "lat": 22.20413353245026,
         "lng": 113.53891879320146
     },
@@ -372,6 +418,7 @@
         "name": "林茂塘臨時休憩區",
         "address": "澳門林茂海邊大馬路",
         "openHour": "星期一至星期日上午7時至晚上10時",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/674_7250d04f4688e4d8941bbb719ef7719d.jpg",
         "lat": 22.20413353245026,
         "lng": 113.53891879320146
     },
@@ -380,6 +427,7 @@
         "name": "林茂塘臨時休憩區",
         "address": "澳門林茂海邊大馬路",
         "openHour": "星期一至星期日上午7時至晚上10時",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/825_38c396cc6fc0c74a64ae78ef0447c1ea.jpg",
         "lat": 22.20413353245026,
         "lng": 113.53891879320146
     },
@@ -388,6 +436,7 @@
         "name": "花城公園",
         "address": "氹仔埃武拉街",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/994_dfacc8e90dd99e5bd3327832ed6fb754.jpg",
         "lat": 22.156618441429384,
         "lng": 113.55729318328302
     },
@@ -396,6 +445,7 @@
         "name": "金像農場",
         "address": "路環竹灣馬路(路環市區往竹灣泳池方向的中間路段) ",
         "openHour": "9:00 – 18:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/929_342c6958cf173b970d3127b31c4402a6.jpg",
         "lat": 22.115998,
         "lng": 113.556855
     },
@@ -404,6 +454,7 @@
         "name": "青洲坊活動中心 (三溫機）",
         "address": "澳門青洲新街56號青洲坊大廈第3座1樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/511_0a62abf0154871e16159a86e00743241.jpg",
         "lat": 22.211881231165883,
         "lng": 113.54308780417342
     },
@@ -412,6 +463,7 @@
         "name": "政府綜合服務大樓 (地面層)",
         "address": "澳門黑沙環新街52號政府綜合服務大樓地面層",
         "openHour": "週一至週五，上午9時至下午6時 (中午照常辦公，週六、日及公眾假期休息)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/745_985274ad64d75c0a8b90ae2025e248cd.jpg",
         "lat": 22.208796,
         "lng": 113.553135
     },
@@ -420,6 +472,7 @@
         "name": "政府綜合服務大樓(地面層) ",
         "address": "澳門黑沙環新街52號政府綜合服務大樓地面層",
         "openHour": "週一至週五，上午9時至下午6時 (中午照常辦公，週六、日及公眾假期休息)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/903_ebd70223a0ce2a50ba54f0f392b66c2e.jpg",
         "lat": 22.208796,
         "lng": 113.553135
     },
@@ -428,6 +481,7 @@
         "name": "紀念孫中山巿政公園 ",
         "address": "澳門何賢紳士大馬路, 紀念孫中山巿政公園",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/725_a1f32a70ba6fee5558106c965c4ae3b4.jpg",
         "lat": 22.21571453557805,
         "lng": 113.5444327096046
     },
@@ -436,6 +490,7 @@
         "name": "紀念孫中山市政公園 (三溫機)",
         "address": "澳門何賢紳士大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/985_c4ca4238a0b923820dcc509a6f75849b.jpg",
         "lat": 22.21627807931552,
         "lng": 113.54726750451458
     },
@@ -444,6 +499,7 @@
         "name": "祐漢活動中心(一樓)",
         "address": "澳門祐漢市場街祐漢街市一樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/905_cbae70a33bebd21ca7750733361725cc.jpg",
         "lat": 22.211395,
         "lng": 113.55137
     },
@@ -452,6 +508,7 @@
         "name": "祐漢活動中心(天台) ",
         "address": "澳門市場街祐漢街市天台",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/963_d5cdfacaee896e36611820974da7291b.jpg",
         "lat": 22.211395,
         "lng": 113.55137
     },
@@ -460,6 +517,7 @@
         "name": "祐漢活動中心三樓(三溫機)",
         "address": "澳門祐漢市場街祐漢街市三樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1056_a9a566253df87757e1987256552e79dd.jpg",
         "lat": 22.211395,
         "lng": 113.55137
     },
@@ -468,6 +526,7 @@
         "name": "祐漢街市公園",
         "address": "市場街",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1038_c81e728d9d4c2f636f067f89cc14862c.jpg",
         "lat": 22.21126061949763,
         "lng": 113.55220665739512
     },
@@ -476,6 +535,7 @@
         "name": "祐漢新村第八街休憩區",
         "address": "澳門祐漢新村第八街",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/861_1641f302dc2a583a8cfc5bf653035bb7.jpg",
         "lat": 22.212328200733673,
         "lng": 113.5506534576416
     },
@@ -484,6 +544,7 @@
         "name": "望廈山市政公園",
         "address": "澳門望廈山",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/867_c6f8942e25928eb37fdba740f24316e3.jpg",
         "lat": 22.207351,
         "lng": 113.548176
     },
@@ -492,6 +553,7 @@
         "name": "望廈山環境資訊中心          ",
         "address": "澳門望廈山    ",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/574_43cd836fe2d45fd4be104728dd68e536.jpg",
         "lat": 22.207048902606214,
         "lng": 113.54899585247041
     },
@@ -500,6 +562,7 @@
         "name": "開心農耕場",
         "address": "路環黑沙公園後方",
         "openHour": "09:00 – 18:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/543_c84291139b2b2aaa6ca0e014d2bd269a.jpg",
         "lat": 22.117344,
         "lng": 113.568191
     },
@@ -508,6 +571,7 @@
         "name": "黑沙公園",
         "address": "路環黑沙馬路，黑沙公園",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/604_d0f1675ae434aea08c8bc966eff93c8e.jpg",
         "lat": 22.118411066316526,
         "lng": 113.56903750610519
     },
@@ -516,6 +580,7 @@
         "name": "黑沙水庫郊野公園",
         "address": "路環黑沙馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/1022_985fdeb0470e69ac882824ef30f79157.jpg",
         "lat": 22.1245152,
         "lng": 113.5711623
     },
@@ -524,6 +589,7 @@
         "name": "黑沙海灘公園(三溫機)",
         "address": "澳門黑沙海灘",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/589_e9d77239d8ba883023c7e180709214ab.jpg",
         "lat": 22.1222292,
         "lng": 113.5706497
     },
@@ -532,6 +598,7 @@
         "name": "黑沙環公園",
         "address": "澳門勞動節大馬路, 黑沙環公園",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/590_4f97b43450978de0cf37d200054eab34.jpg",
         "lat": 22.210973,
         "lng": 113.554038
     },
@@ -540,6 +607,7 @@
         "name": "黑沙環公園 ",
         "address": "澳門勞動節大馬路, 黑沙環公園",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/778_1a29ef4f27bf683d8d794c2a060d98c0.jpg",
         "lat": 22.209297605833417,
         "lng": 113.55607821080088
     },
@@ -548,6 +616,7 @@
         "name": "筷子基活動中心(三溫機)",
         "address": "澳門筷子基巷筷子基社屋快意樓4樓A室",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/924_c60e8a383126bdeb4e2e7fe81ca7c8fe.jpg",
         "lat": 22.206488,
         "lng": 113.538959
     },
@@ -556,6 +625,7 @@
         "name": "瑪利二世皇后眺望台",
         "address": "馬交石炮台馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/605_eecd02c1f3d90be659fd0598cf0d3958.jpeg",
         "lat": 22.203224639764763,
         "lng": 113.55647921562196
     },
@@ -564,6 +634,7 @@
         "name": "蓮花單車徑",
         "address": "氹仔蓮花海濱大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/922_c36fbddbc3fb3cc66798b018f2d1ba2d.jpg",
         "lat": 22.14210232256122,
         "lng": 113.55261518410217
     },
@@ -572,6 +643,7 @@
         "name": "燒灰爐公園",
         "address": "澳門民國大馬路",
         "openHour": "06:00-24:00",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/889_fa8a40ab3640ff4a1cd8a9d4bd6a8b57.jpg",
         "lat": 22.186673,
         "lng": 113.537075
     },
@@ -580,6 +652,7 @@
         "name": "營地活動中心 (三溫機)",
         "address": "澳門米糙巷營地街市市政綜合大樓四樓",
         "openHour": "每日早上十時至晚上十時(週末及公眾假期照常開放，農曆新年假期除外。)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/687_1c6b5a1af9b5bf3956fabcfae5240bc7.jpg",
         "lat": 22.194602,
         "lng": 113.539651
     },
@@ -588,6 +661,7 @@
         "name": "離島政府綜合服務中心 ",
         "address": "氹仔哥英布拉街225號3樓 ",
         "openHour": "週一至週五，上午9時至下午6時 (中午照常辦公，週六、日及公眾假期休息)",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/882_f40a2891ca86df41d04f269446fe4bd3.jpg",
         "lat": 22.158155,
         "lng": 113.556253
     },
@@ -596,6 +670,7 @@
         "name": "觀音像海濱休憩區",
         "address": "孫逸仙大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/926_5d6296baffbd3618502cf8453f710b61.jpg",
         "lat": 22.186997680219775,
         "lng": 113.5536575317383
     },
@@ -604,6 +679,7 @@
         "name": "觀音像海濱休憩區",
         "address": "孫逸仙大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/722_31869d2e752e8cb85a06669bbff0e0e7.jpg",
         "lat": 22.186997680219775,
         "lng": 113.5536575317383
     },
@@ -612,6 +688,7 @@
         "name": "觀音像海濱休憩區 ",
         "address": "孫逸仙大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/616_2af77d6d6ec34797722e9bf1e6377eca.jpg",
         "lat": 22.186997680219775,
         "lng": 113.5536575317383
     },
@@ -620,6 +697,7 @@
         "name": "觀音像海濱休憩區 ",
         "address": "孫逸仙大馬路",
         "openHour": "全日",
+        "photo": "https://www.iam.gov.mo/showFile.ashx?p=iamweb/List13/830_e52d3c17157a1a5d39d0d553fb729fb5.jpg",
         "lat": 22.186997680219775,
         "lng": 113.5536575317383
     },
@@ -628,6 +706,7 @@
         "name": "環境保護局地下大堂",
         "address": "澳門馬交石炮台馬路32號至36號電力公司大樓地面層",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2041578647687,
         "lng": 113.55401536856
     },
@@ -636,6 +715,7 @@
         "name": "環境保護局接待處",
         "address": "澳門馬交石炮台馬路32號至36號電力公司大樓一樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2042390971082,
         "lng": 113.55410269947
     },
@@ -644,6 +724,7 @@
         "name": "外港客運碼頭－入境大堂",
         "address": "地面層入境大堂旅遊局諮詢櫃檯側",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1968675459726,
         "lng": 113.558704699301
     },
@@ -652,6 +733,7 @@
         "name": "外港客運碼頭－離境大堂",
         "address": "一樓離境大堂驗證櫃檯附近通道",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1970567922391,
         "lng": 113.559441835685
     },
@@ -660,6 +742,7 @@
         "name": "氹仔客運碼頭－入境大堂",
         "address": "地面層入境大堂男洗手間旁邊",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1649346005025,
         "lng": 113.574042309082
     },
@@ -668,6 +751,7 @@
         "name": "氹仔客運碼頭－候船室通道",
         "address": "一樓3號、5號候船室之間",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1642288087356,
         "lng": 113.576203857115
     },
@@ -676,6 +760,7 @@
         "name": "交通事務局（馬交石）服務專區 ",
         "address": "澳門馬交石炮台馬路33號地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2039141773664,
         "lng": 113.553733980278
     },
@@ -684,6 +769,7 @@
         "name": "郵電局大樓 ",
         "address": "澳門議事亭前地",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.193255155503,
         "lng": 113.540199904737
     },
@@ -692,6 +778,7 @@
         "name": "房屋局總部",
         "address": "澳門鴨涌馬路220號青葱大廈地下L",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2123004968846,
         "lng": 113.54157680219
     },
@@ -700,6 +787,7 @@
         "name": "環保加Fun站（青洲）",
         "address": "澳門青洲新馬路青洲社屋青雅樓A座地面層",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2128529266528,
         "lng": 113.53792067197
     },
@@ -708,6 +796,7 @@
         "name": "環保加Fun站（石排灣）",
         "address": "路環石排灣和諧大馬路業興大廈第3座地下C鋪",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1303161279092,
         "lng": 113.564449959194
     },
@@ -716,6 +805,7 @@
         "name": "房屋局青洲坊辦事處 ",
         "address": "澳門鴨涌河南街青洲坊大廈地下K",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21216,
         "lng": 113.54285
     },
@@ -724,6 +814,7 @@
         "name": "中區市民服務中心",
         "address": "澳門嘉路米耶圓形地5及7號三盞燈綜合大樓三樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.20263,
         "lng": 113.54599
     },
@@ -732,6 +823,7 @@
         "name": "離島政府綜合服務中心",
         "address": "氹仔哥英布拉街225號三樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1578647797846,
         "lng": 113.556198480133
     },
@@ -740,6 +832,7 @@
         "name": "離島區市民服務中心—石排灣分站",
         "address": "路環蝴蝶谷大馬路石排灣社區綜合大樓六樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1286196755483,
         "lng": 113.562074068155
     },
@@ -748,6 +841,7 @@
         "name": "三盞燈活動中心",
         "address": "澳門嘉路米耶圓形地5及7號三盞燈綜合大樓地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.202581418979,
         "lng": 113.545926314505
     },
@@ -756,6 +850,7 @@
         "name": "祐漢活動中心",
         "address": "澳門市場街祐漢街市綜合大樓一樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2110498060343,
         "lng": 113.551129265833
     },
@@ -764,6 +859,7 @@
         "name": "筷子基活動中心",
         "address": "澳門筷子基巷筷子基社屋快意樓四樓A室",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2065581259435,
         "lng": 113.538751721724
     },
@@ -772,6 +868,7 @@
         "name": "營地活動中心",
         "address": "澳門米糙巷營地街市市政綜合大樓四樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.194618863915,
         "lng": 113.540064812577
     },
@@ -780,6 +877,7 @@
         "name": "下環活動中心",
         "address": "澳門李加祿街下環街市市政綜合大樓四樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.190945527813,
         "lng": 113.534700459903
     },
@@ -788,6 +886,7 @@
         "name": "沙梨頭活動中心",
         "address": "澳門爹美刁施拿地大馬路沙梨頭街市市政綜合大樓九樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2024768565512,
         "lng": 113.537188377131
     },
@@ -796,6 +895,7 @@
         "name": "石排灣活動中心",
         "address": "路環蝴蝶谷大馬路石排灣社區綜合大樓六樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.12862,
         "lng": 113.56215
     },
@@ -804,6 +904,7 @@
         "name": "環保加Fun站（祐漢）",
         "address": "澳門永寧街永寧廣場大廈地面層96號及100號地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2127825574624,
         "lng": 113.55343854227
     },
@@ -812,6 +913,7 @@
         "name": "西望洋花園 ",
         "address": "澳門西望洋馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1848684108688,
         "lng": 113.533117127936
     },
@@ -820,6 +922,7 @@
         "name": "松山市政公園(山上纜車站入口) ",
         "address": "澳門東望洋山(山上纜車站入口",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1993632499001,
         "lng": 113.552567569112
     },
@@ -828,6 +931,7 @@
         "name": "松山市政公園(近松山馬路跑步徑入口) ",
         "address": "澳門東望洋山(近松山馬路跑步徑入口)  ",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19693,
         "lng": 113.54885
     },
@@ -836,6 +940,7 @@
         "name": "松山市政公園(近松山馬路跑步徑入口)",
         "address": "澳門東望洋山(近松山馬路跑步徑入口)",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1968996892154,
         "lng": 113.548813168543
     },
@@ -844,6 +949,7 @@
         "name": "氹仔中央公園 （近籃球場）",
         "address": "氹仔成都街7號",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1596900410163,
         "lng": 113.554212101143
     },
@@ -852,6 +958,7 @@
         "name": "石排灣郊野公園 ",
         "address": "路環石排灣馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1267794777916,
         "lng": 113.558253917186
     },
@@ -860,6 +967,7 @@
         "name": "白鴿巢公園 ",
         "address": "澳門白鴿巢前地",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2014194088487,
         "lng": 113.539224439456
     },
@@ -868,6 +976,7 @@
         "name": "西灣湖休憩區 ",
         "address": "澳門西灣湖景大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1795946765295,
         "lng": 113.532436044923
     },
@@ -876,6 +985,7 @@
         "name": "永久駕駛學習暨考試中心 ",
         "address": "路氹城輕軌車廠側",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1511614417876,
         "lng": 113.575806317083
     },
@@ -884,6 +994,7 @@
         "name": "水坑尾郵政分局 ",
         "address": "澳門水坑尾街162號公共行政大樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1941023684147,
         "lng": 113.544030797901
     },
@@ -892,6 +1003,7 @@
         "name": "花城公園(活動室門口)",
         "address": "氹仔埃武拉街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1566360064845,
         "lng": 113.557293252512
     },
@@ -900,6 +1012,7 @@
         "name": "瑪利二世皇后眺望台",
         "address": "澳門馬交石炮台馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.20335,
         "lng": 113.55671
     },
@@ -908,6 +1021,7 @@
         "name": "石排灣郊野公園(近野餐區)",
         "address": "路環石排灣馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1256875233272,
         "lng": 113.556789639765
     },
@@ -916,6 +1030,7 @@
         "name": "紀念孫中山市政公園",
         "address": "澳門何賢紳士大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2158302887429,
         "lng": 113.544371859467
     },
@@ -924,6 +1039,7 @@
         "name": "竹室正街休憩區",
         "address": "澳門竹室正街/西望洋斜巷",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1873146555477,
         "lng": 113.535930323527
     },
@@ -932,6 +1048,7 @@
         "name": "宋玉生公園",
         "address": "澳門宋玉生廣場",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1883013877353,
         "lng": 113.550825385071
     },
@@ -940,6 +1057,7 @@
         "name": "黑沙環公園黃營均圖書館",
         "address": "澳門勞動節大馬路與馬場東大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.209358544697,
         "lng": 113.556045417794
     },
@@ -948,6 +1066,7 @@
         "name": "氹仔中央公園（近足球場）",
         "address": "氹仔成都街7號",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1582807703379,
         "lng": 113.555103202743
     },
@@ -956,6 +1075,7 @@
         "name": "氹仔海濱休憩區（近涼亭）",
         "address": "氹仔東亞運大馬路、東亞運圓形地及海洋大馬路的沿海位置",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1622344197195,
         "lng": 113.539913155743
     },
@@ -964,6 +1084,7 @@
         "name": "氹仔海洋大馬路休憩區（近單車租賃場）",
         "address": "東亞運圓形地／氹仔海洋花園",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1623964711111,
         "lng": 113.541086358316
     },
@@ -972,6 +1093,7 @@
         "name": "青年試館",
         "address": "澳門高偉樂街（塔石體育館）",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1971714647561,
         "lng": 113.54701925981
     },
@@ -980,6 +1102,7 @@
         "name": "中葡職業技術學校（二樓）*",
         "address": "澳門勞動節街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2101362277121,
         "lng": 113.55404799574
     },
@@ -988,6 +1111,7 @@
         "name": "中葡職業技術學校（三樓）*",
         "address": "澳門勞動節街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2101000747681,
         "lng": 113.554106165408
     },
@@ -996,6 +1120,7 @@
         "name": "房屋局離島辦事處",
         "address": "氹仔湛江街66-68號湖畔大廈1樓D",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1588017211322,
         "lng": 113.5604066714
     },
@@ -1004,6 +1129,7 @@
         "name": "房屋局（青葱）辦事處",
         "address": "澳門化驗所街39號青葱大廈地下D鋪",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.212093012204,
         "lng": 113.541062669849
     },
@@ -1012,6 +1138,7 @@
         "name": "環保加Fun站（下環）",
         "address": "澳門鵝眉街6-6A號怡景臺花園大廈地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1912521245051,
         "lng": 113.53583517273
     },
@@ -1020,6 +1147,7 @@
         "name": "環保加Fun站 （下環）",
         "address": "澳門鵝眉街6-6A號怡景臺花園大廈Ｍ層",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1912340473607,
         "lng": 113.53587395322
     },
@@ -1028,6 +1156,7 @@
         "name": "大潭山郊野公園",
         "address": "氹仔天文台斜路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1589944988643,
         "lng": 113.570538067497
     },
@@ -1036,6 +1165,7 @@
         "name": "大潭山眺望台",
         "address": "氹仔司徒澤雄神父馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1556130274149,
         "lng": 113.561858860354
     },
@@ -1044,6 +1174,7 @@
         "name": "燒灰爐公園",
         "address": "澳門民國大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1868987397907,
         "lng": 113.537161638992
     },
@@ -1052,6 +1183,7 @@
         "name": "水塘公園",
         "address": "澳門水塘周邊",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1984770141558,
         "lng": 113.554952690706
     },
@@ -1060,6 +1192,7 @@
         "name": "下環活動中心(天台球場休憩區)",
         "address": "澳門李加祿街下環街市市政綜合大樓天台",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1909365046447,
         "lng": 113.534681061429
     },
@@ -1068,6 +1201,7 @@
         "name": "祐漢活動中心(天台運動場)",
         "address": "澳門市場街祐漢街市綜合大樓天台",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2110678963546,
         "lng": 113.551071084717
     },
@@ -1076,6 +1210,7 @@
         "name": "駿菁活動中心 （地下籃球場）",
         "address": "澳門順景廣場近馬場東大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2135948809112,
         "lng": 113.554311905977
     },
@@ -1084,6 +1219,7 @@
         "name": "環保加Fun站（黑橋）",
         "address": "氹仔黑橋街平民新邨第11座115號B-D地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.15509,
         "lng": 113.5555
     },
@@ -1092,6 +1228,7 @@
         "name": "駿菁活動中心（地面層康樂活動區走廊通道 ）",
         "address": "澳門順景廣場近馬場東大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2136581312209,
         "lng": 113.554244052227
     },
@@ -1100,6 +1237,7 @@
         "name": "西灣湖下層廣場",
         "address": "西灣湖景大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1810649953878,
         "lng": 113.536771029428
     },
@@ -1108,6 +1246,7 @@
         "name": "路氹城汽車檢驗中心",
         "address": "路氹城駕駛學習暨考試中心側",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.1502669235655,
         "lng": 113.57652303708
     },
@@ -1116,6 +1255,7 @@
         "name": "環保加Fun站（望廈）",
         "address": "澳門俾利喇街望廈社屋望德樓一樓D社會設施",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2071212484062,
         "lng": 113.551466465948
     },
@@ -1124,6 +1264,7 @@
         "name": "房屋局石排灣辦事處",
         "address": "路環蝴蝶谷大馬路石排灣社區綜合大樓2樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.12864,
         "lng": 113.56196
     },
@@ -1132,6 +1273,7 @@
         "name": "外港活動中心",
         "address": "澳門新口岸畢仕達大馬路綜藝館第二座",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19439,
         "lng": 113.55237
     },
@@ -1140,6 +1282,7 @@
         "name": "德育中心",
         "address": "澳門祐漢看台街翡翠廣埸三樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21257,
         "lng": 113.55196
     },
@@ -1148,6 +1291,7 @@
         "name": "教育心理輔導及特殊教育中心（永添）",
         "address": "澳門祐漢中心街永添新邨第1座1樓",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21209,
         "lng": 113.55267
     },
@@ -1156,6 +1300,7 @@
         "name": "中葡職業技術學校（二樓圓環地） *",
         "address": "澳門黑沙環勞動節街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21012,
         "lng": 113.55387
     },
@@ -1164,6 +1309,7 @@
         "name": "鄭觀應公立學校 （地面層雜物房外）",
         "address": "澳門台山菜園涌邊街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21348,
         "lng": 113.54476
     },
@@ -1172,6 +1318,7 @@
         "name": "何東中葡小學 （四樓）*",
         "address": "澳門得勝馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19695,
         "lng": 113.54711
     },
@@ -1180,6 +1327,7 @@
         "name": "氹仔中葡學校  （二樓）*",
         "address": "氹仔巴波沙總督前地",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.15192,
         "lng": 113.55519
     },
@@ -1188,6 +1336,7 @@
         "name": "高美士中葡中學",
         "address": "澳門士多鳥拜斯大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19819,
         "lng": 113.54829
     },
@@ -1196,6 +1345,7 @@
         "name": "二龍喉公立學校 （地面層）",
         "address": "澳門山洞巷二龍喉公園",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.20008,
         "lng": 113.55095
     },
@@ -1204,6 +1354,7 @@
         "name": "教育心理輔導及特殊教育中心（永寧）",
         "address": "澳門菜園路415號永寧廣場大廈3座,GF-1F",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21275,
         "lng": 113.55323
     },
@@ -1212,6 +1363,7 @@
         "name": "中葡職業技術學校（地面層風雨操場）",
         "address": "澳門黑沙環勞動節街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.20987,
         "lng": 113.55368
     },
@@ -1220,6 +1372,7 @@
         "name": "中葡職業技術學校體育館",
         "address": "澳門黑沙環馬場東大馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.2095,
         "lng": 113.55359
     },
@@ -1228,6 +1381,7 @@
         "name": "鄭觀應公立學校（地面層圖書館前）",
         "address": "澳門台山菜園涌邊街",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21349,
         "lng": 113.54465
     },
@@ -1236,6 +1390,7 @@
         "name": "何東中葡小學（三樓）*",
         "address": "澳門得勝馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19693,
         "lng": 113.54713
     },
@@ -1244,6 +1399,7 @@
         "name": "氹仔中葡學校（地面層禮堂門外）",
         "address": "氹仔巴波沙總督前地",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.15169,
         "lng": 113.55523
     },
@@ -1252,6 +1408,7 @@
         "name": "二龍喉公立學校（一樓）*",
         "address": "澳門山洞巷二龍喉公園",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19999,
         "lng": 113.55091
     },
@@ -1260,6 +1417,7 @@
         "name": "黑沙青年旅舍",
         "address": "路環黑沙龍爪角海濱馬路",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.11595,
         "lng": 113.56958
     },
@@ -1268,6 +1426,7 @@
         "name": "環保加Fun站（官也街）",
         "address": "氹仔告利雅施利華街25號地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.15286,
         "lng": 113.55698
     },
@@ -1276,6 +1435,7 @@
         "name": "環保加Fun站（巴波沙）",
         "address": "澳門關閘馬路台山平民新邨A座地下11號及12號商舖",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.21206,
         "lng": 113.54805
     },
@@ -1284,6 +1444,7 @@
         "name": "環保加Fun站（林茂塘）",
         "address": "澳門林茂海邊大馬路雨水箱涵排水口臨時汙水處理設施地下",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.20321,
         "lng": 113.5375
     },
@@ -1292,6 +1453,7 @@
         "name": "環保加Fun站（慕拉士） ",
         "address": "慕拉士大馬路望廈社屋-望信樓第1座地下G",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.20467,
         "lng": 113.55468
     },
@@ -1300,6 +1462,7 @@
         "name": "石排灣公立學校（7樓禮堂外）",
         "address": "路環石排灣蝴蝶谷大馬路CN6a地段",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.12855,
         "lng": 113.5607
     },
@@ -1308,6 +1471,7 @@
         "name": "二龍喉公立學校（地面操場）",
         "address": "澳門山洞巷二龍喉公園",
         "openHour": "依場地開放時間為準",
+        "photo": "",
         "lat": 22.19988,
         "lng": 113.55059
     }
