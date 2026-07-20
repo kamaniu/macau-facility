@@ -76,7 +76,7 @@
 </head>
 <body>
 
-    <div id="loading">🔄 正在透過 APIGateway 安全獲取飲水設施數據...</div>
+    <div id="loading">🔄 正在獲取市政署與環保局飲水設施數據...</div>
     
     <div id="legend-panel">
         <strong style="display:block; margin-bottom: 5px;">💧 飲水設施分類</strong>
@@ -113,11 +113,8 @@
 
         let userLocationMarker = null;
 
-        // 【修正】填入你提供的主流 API 網關網址
         const iamUrl = "https://iam.apigateway.data.gov.mo/facility_drink"; 
         const dspaUrl = "https://dspa.apigateway.data.gov.mo/T_Bas_POI_Basic/drinkingFountain";
-        
-        // 【修正】加入你的專屬 APPCODE 認證標頭，解決 403 / 401 拒絕連線問題
         const headers = { "Authorization": "APPCODE 09d43a591fba407fb862412970667de4" };
 
         function createWaterIcon(color) {
@@ -129,118 +126,88 @@
             });
         }
 
-        // 解析政府 API 返回的 XML 字符串（如果 API 返回的是 XML）
-        function parseXml(xmlString) {
-            const parser = new DOMParser();
-            return parser.parseFromString(xmlString, "text/xml");
+        // 遞迴尋找 JSON 物件中隱藏的陣列（防止政府 API 結構有多層包裹）
+        function findDataArray(obj) {
+            if (Array.isArray(obj)) return obj;
+            if (obj && typeof obj === 'object') {
+                for (let key in obj) {
+                    if (Array.isArray(obj[key])) return obj[key];
+                    let deepResult = findDataArray(obj[key]);
+                    if (deepResult) return deepResult;
+                }
+            }
+            return null;
         }
 
         async function fetchWaterData() {
             try {
-                // 帶上驗證頭部請求數據
                 const [iamRes, dspaRes] = await Promise.all([
                     fetch(iamUrl, { headers }),
                     fetch(dspaUrl, { headers })
                 ]);
 
-                const iamText = await iamRes.text();
-                const dspaText = await dspaRes.text();
+                const iamJson = await iamRes.json();
+                const dspaJson = await dspaRes.json();
 
                 document.getElementById('loading').style.display = 'none';
 
-                // --- 1. 解析市政署 (IAM) 資料 ---
-                try {
-                    // 自動判斷 API 給的是 JSON 還是 XML
-                    if (iamText.trim().startsWith('{')) {
-                        const iamJson = JSON.parse(iamText);
-                        const items = iamJson.data || iamJson.Data || iamJson;
-                        if (Array.isArray(items)) {
-                            items.forEach(item => renderIamMarker(item));
-                        }
-                    } else {
-                        const xmlDoc = parseXml(iamText);
-                        const items = xmlDoc.getElementsByTagName("facility") || xmlDoc.getElementsByTagName("info") || xmlDoc.querySelectorAll("location");
-                        // 如果是標準 XML 節點遍歷
-                        for (let item of xmlDoc.querySelectorAll('*')) {
-                            if (item.getAttribute('location') || item.getElementsByTagName('location').length > 0) {
-                                // 嘗試兼容節點屬性讀取
-                                renderIamMarker({
-                                    location: item.getAttribute('location') || item.textContent,
-                                    cn_name: item.getAttribute('cn_name') || item.getAttribute('name') || '市政署飲水機'
-                                });
-                            }
-                        }
-                    }
-                } catch (e) { console.error("解析市政署數據時出錯", e); }
+                // --- 1. 解析與渲染市政署 (IAM) 數據 ---
+                const iamItems = findDataArray(iamJson);
+                if (iamItems) {
+                    iamItems.forEach(item => {
+                        if (item.location && typeof item.location === 'string') {
+                            const coords = item.location.split(',');
+                            const lat = parseFloat(coords[0]);
+                            const lng = parseFloat(coords[1]);
 
-                // --- 2. 解析環境保護局 (DSPA) 資料 ---
-                try {
-                    if (dspaText.trim().startsWith('{')) {
-                        const dspaJson = JSON.parse(dspaText);
-                        const items = dspaJson.data || dspaJson.Data || dspaJson;
-                        if (Array.isArray(items)) {
-                            items.forEach(item => renderDspaMarker(item));
-                        }
-                    } else {
-                        const xmlDoc = parseXml(dspaText);
-                        // 尋找包含經緯度的標籤
-                        const records = xmlDoc.getElementsByTagName("record") || xmlDoc.getElementsByTagName("info") || xmlDoc.querySelectorAll("*");
-                        for (let item of records) {
-                            const latAttr = item.getAttribute('latitude') || (item.getElementsByTagName('latitude')[0] ? item.getElementsByTagName('latitude')[0].textContent : null);
-                            const lngAttr = item.getAttribute('longitude') || (item.getElementsByTagName('longitude')[0] ? item.getElementsByTagName('longitude')[0].textContent : null);
-                            if (latAttr && lngAttr) {
-                                renderDspaMarker({
-                                    latitude: latAttr,
-                                    longitude: lngAttr,
-                                    place_nc: item.getAttribute('place_nc') || item.getAttribute('name') || '環保局飲水設施'
-                                });
+                            if (!isNaN(lat) && !isNaN(lng)) {
+                                // 【修正】精確匹配真實欄位 nameZh 與 addressZh
+                                const name = item.nameZh || "市政署飲水機";
+                                const address = item.addressZh || "見地圖標記位置";
+                                const openHour = item.openHourZh ? `<p style="margin: 4px 0; font-size: 12px;">⏰ <b>開放時間：</b>${item.openHourZh}</p>` : "";
+                                
+                                const popupHtml = `
+                                    <div style="font-family: Arial, sans-serif; width: 230px; line-height: 1.4;">
+                                        <h4 style="margin: 0 0 5px 0; color: #2980b9; font-size: 14px;">🔵 ${name}</h4>
+                                        <p style="margin: 4px 0; font-size: 12px;">📍 <b>地址：</b>${address}</p>
+                                        ${openHour}
+                                        <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>數據來源：</b>市政署 (IAM)</p>
+                                    </div>
+                                `;
+                                L.marker([lat, lng], { icon: createWaterIcon('#2980b9') }).addTo(map).bindPopup(popupHtml);
                             }
                         }
-                    }
-                } catch (e) { console.error("解析環保局數據時出錯", e); }
+                    });
+                }
+
+                // --- 2. 解析與渲染環境保護局 (DSPA) 數據 ---
+                const dspaItems = findDataArray(dspaJson);
+                if (dspaItems) {
+                    dspaItems.forEach(item => {
+                        // 【修正】精確匹配真實欄位 latitude 與 longitude
+                        const lat = parseFloat(item.latitude);
+                        const lng = parseFloat(item.longitude);
+
+                        if (!isNaN(lat) && !isNaN(lng)) {
+                            // 【修正】精確匹配真實欄位 name_tc 與 address_tc
+                            const name = item.name_tc || "環保局飲水設施";
+                            const address = item.address_tc || "見地圖標記位置";
+
+                            const popupHtml = `
+                                <div style="font-family: Arial, sans-serif; width: 230px; line-height: 1.4;">
+                                    <h4 style="margin: 0 0 5px 0; color: #27ae60; font-size: 14px;">🟢 ${name}</h4>
+                                    <p style="margin: 4px 0; font-size: 12px;">📍 <b>地址：</b>${address}</p>
+                                    <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>數據來源：</b>環境保護局 (DSPA)</p>
+                                </div>
+                            `;
+                            L.marker([lat, lng], { icon: createWaterIcon('#27ae60') }).addTo(map).bindPopup(popupHtml);
+                        }
+                    });
+                }
 
             } catch (error) {
-                console.error("API 連線失敗：", error);
-                document.getElementById('loading').innerText = "❌ 認證或連線失敗，請檢查 APPCODE 是否過期。";
-            }
-        }
-
-        // 市政署標記渲染輔助函式
-        function renderIamMarker(item) {
-            let locStr = item.location || item.Location || "";
-            if (!locStr) return;
-            const coords = locStr.split(',');
-            const lat = parseFloat(coords[0]);
-            const lng = parseFloat(coords[1]);
-
-            if (!isNaN(lat) && !isNaN(lng)) {
-                const name = item.cn_name || item.cn_location || item.name || "市政署飲水設施";
-                const popupHtml = `
-                    <div style="font-family: Arial, sans-serif; width: 220px; line-height: 1.4;">
-                        <h4 style="margin: 0 0 5px 0; color: #2980b9; font-size: 14px;">🔵 市政署飲水機</h4>
-                        <p style="margin: 4px 0; font-size: 12px;">📍 <b>位置：</b>${name}</p>
-                        <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>數據來源：</b>市政署 (IAM)</p>
-                    </div>
-                `;
-                L.marker([lat, lng], { icon: createWaterIcon('#2980b9') }).addTo(map).bindPopup(popupHtml);
-            }
-        }
-
-        // 環保局標記渲染輔助函式
-        function renderDspaMarker(item) {
-            const lat = parseFloat(item.latitude || item.Latitude);
-            const lng = parseFloat(item.longitude || item.Longitude);
-
-            if (!isNaN(lat) && !isNaN(lng)) {
-                const name = item.place_nc || item.address || item.name || "環保局加水點";
-                const popupHtml = `
-                    <div style="font-family: Arial, sans-serif; width: 220px; line-height: 1.4;">
-                        <h4 style="margin: 0 0 5px 0; color: #27ae60; font-size: 14px;">🟢 環保局飲水設施</h4>
-                        <p style="margin: 4px 0; font-size: 12px;">📍 <b>位置：</b>${name}</p>
-                        <p style="margin: 4px 0; font-size: 11px; color: #7f8c8d;">🏢 <b>數據來源：</b>環境保護局 (DSPA)</p>
-                    </div>
-                `;
-                L.marker([lat, lng], { icon: createWaterIcon('#27ae60') }).addTo(map).bindPopup(popupHtml);
+                console.error("飲水機數據加載失敗：", error);
+                document.getElementById('loading').innerText = "❌ 獲取數據失敗，請確認網路連線或 APPCODE 有效性。";
             }
         }
 
