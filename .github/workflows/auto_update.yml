@@ -12,11 +12,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    # 【修正】升級至 v4 最新釋出版本以支援新版 Node.js 執行環境
     - name: 1. 複製專案檔案
       uses: actions/checkout@v4.2.2 
 
-    # 【修正】升級至 v5 最新釋出版本以消除 Node.js 20 的廢棄警告
+    - name: 2. 設定 Python
       uses: actions/setup-python@v5.4.0
       with:
         python-version: '3.10'
