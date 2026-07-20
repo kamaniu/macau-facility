@@ -2,7 +2,7 @@ name: 澳門飲水機數據定時更新
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 飲水機位置是固定的，設定每天凌晨自動更新一次即可，不用浪費伺服器資源
+    - cron: '0 0 * * *' # 每天凌晨自動更新一次
   workflow_dispatch: # 允許手動點擊測試
 
 permissions:
@@ -12,11 +12,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    # 【修正】升級至 v4 最新釋出版本以支援新版 Node.js 執行環境
     - name: 1. 複製專案檔案
-      uses: actions/checkout@v4
+      uses: actions/checkout@v4.2.2 
 
-    - name: 2. 設定 Python
-      uses: actions/setup-python@v5
+    # 【修正】升級至 v5 最新釋出版本以消除 Node.js 20 的廢棄警告
+      uses: actions/setup-python@v5.4.0
       with:
         python-version: '3.10'
 
